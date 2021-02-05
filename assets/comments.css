@@ -1,0 +1,139 @@
+ol.comment-list{
+	list-style: none;
+	padding-left: 0px;
+}
+/* 评论列表 */
+ol.comment-list div.comlist{
+	margin-bottom: 30px;
+	/*margin-left: 20px;*/
+}
+div.comreply{
+	margin-left: 20px;
+}
+/* 评论者头像 */
+img.avatar{
+	width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+	border: 1px solid rgb(55,152,218);
+	padding: 2px;
+	margin-bottom: -25px;
+}
+/* 评论者链接 */
+span.authorurl{
+	color: rgb(255, 102, 102);
+	font-weight: 700;
+	font-size: 24px;
+	font-style: normal;
+}
+span.authorurl a{
+	color: rgb(255, 105, 180);
+	text-decoration: none;
+	text-shadow: none;
+	font-weight: bold;
+}
+/* 评论正文 */
+div.comcontent{
+	margin-left: 50px;
+	margin-bottom: 0px;
+	color:  rgb(0, 255, 255);
+}
+/* 评论时间 && 回复 */
+span.timeandreply{
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
+span.comtimes{
+	margin-top: 0px;
+}
+
+/* 回复按钮、取消回复按钮、退出评论身份按钮*/
+span.comment-reply a,span.cancelre a,a.idenout{
+
+	padding: 2px;
+	/*margin: 5px;*/
+	color: rgb(255, 105, 180);
+	/*color: rgb(4,26,37);*/
+	background: rgb(4,26,37);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(255, 105, 180);
+}
+span.comment-reply a:hover,span.cancelre a:hover,a.idenout:hover{
+	background: rgb(255, 105, 180);
+	color: rgb(4,26,37);
+	text-shadow: 0px 0px 5px rgb(4,26,37);
+}
+
+/* 评论身份 */
+a.idenfy{
+	font-size: 18px;
+	font-weight: 700;
+	padding: 2px;
+	color: rgb(255, 105, 180);
+	text-decoration: none;
+}
+
+/* 提交评论按钮 */
+button.submitcom{
+	padding: 2px;
+	/*margin: 5px;*/
+	color: rgb(255, 105, 180);
+	/*color: rgb(4,26,37);*/
+	background: rgb(4,26,37);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(255, 105, 180);
+}
+button.submitcom:hover{
+	background: rgb(255, 105, 180);
+	color: rgb(4,26,37);
+	text-shadow: 0px 0px 5px rgb(4,26,37);
+}
+
+/* 评论者信息 */
+div.urlinput,div.username,div.usermail{
+	overflow: hidden;
+	height: 26px;
+	/*width: 100%;*/
+}
+div.urlinput>div{height: 100%;}
+div.username>div{height: 100%;}
+div.usermail>div{height: 100%;}
+div.urlinput #urlleft,div.username #usernameleft,div.usermail #usermailleft{
+	/*width: 10%;*/
+	/*width: 20px;*/
+	float: left;
+	width: 40px;
+}
+div.urlinput #urlright,div.username #usernameright,div.usermail #usermailright{
+	/*width: calc(100%-32px);*/
+	/*margin-left: 5px;*/
+	overflow: hidden;
+}
+div.urlinput #urlright input,div.username #usernameright input,div.usermail #usermailright input{
+	width: 100%;
+}
+textarea.textinput{
+	width: 100%;
+}
+
+div.nameandmail{
+	overflow: hidden;
+}
+div.nameandmail div.username{
+	float: left;
+	width: 50%;
+}
+div.nameandmail div.usermail{
+	overflow: hidden;
+	width: 50%;
+}

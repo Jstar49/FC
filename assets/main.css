@@ -1,0 +1,151 @@
+body{
+	background-color: rgb(4,26,37);
+	font-size: 16px;
+  	font-family: 'Source Code Pro', monospace;
+}
+
+div.mainContainer{
+	max-width: 800px;
+  	min-width: 300px;
+  	margin:0 auto ;
+  	margin-top: 200px;
+  	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(55,152,218);
+  	padding: 2px;
+}
+
+/* ==================== 闪烁效果 =================*/
+div.bring{
+	animation: mainContainer 10s linear infinite;
+}
+@keyframes mainContainer{
+	0%{opacity: 0.8}
+	10%{opacity: 0.5}
+	20%{opacity: 0.9}
+	30%{opacity: 0.7}
+	40%{opacity: 0.9}
+	50%{opacity: 1}
+	60%{opacity: 0.9}
+	70%{opacity: 0.6}
+	80%{opacity: 0.9}
+	90%{opacity: 0.8}
+	100%{opacity: 0.9}
+}
+
+/*================= 首页框架 ========================*/
+
+div.indiv{
+	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(55,152,218);
+  	/*margin-top: 3px;*/
+}
+
+.bodyother{
+	padding: 20px;
+	margin-bottom: 2px;	
+}
+
+/* ===================== 颜色 ====================*/
+.blue{
+	color: rgb(55,152,218);
+}
+
+.green{
+	color: rgb(144, 238, 144);
+}
+.blue-green{
+	/*color: rgb(0, 255, 255);*/
+}
+/* ================== 主页文章卡片 ==============*/
+a.articletitle{
+	text-decoration: none;
+}
+
+h1.at{
+	font-family: 'Black Ops One', cursive;
+	font-size: 28px;
+}
+div.tips{
+	margin-bottom: 10px;	
+
+}
+/* ========= 分类按钮 ==========*/
+div.articletag{
+	margin-top: 10px;
+}
+span.tags a{
+	padding: 2px;
+	/*margin: 5px;*/
+	color: rgb(255, 105, 180);
+	/*color: rgb(4,26,37);*/
+	/*background: rgb(255, 105, 180);*/
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	/*border-style: solid; */
+  	/*border-width: 2px;*/
+  	/*border-color: rgb(255, 105, 180);*/
+}
+span.tags a:hover{
+	background: transparent;
+	color: rgb(255, 105, 180);
+	text-shadow: 0px 0px 5px rgb(4,26,37);
+}
+
+/* =============== 评论区=====================*/
+div.comsother{
+	padding: 20px;
+	margin-bottom: 2px;	
+}
+
+/* =================== 分页区 ======================= */
+div.pageNumber{
+	text-align: center;
+	
+}
+ol.page-navigator{
+	display: inline-block;
+	list-style: none;
+	padding-left: 0px;
+}
+ol.page-navigator li{
+	display: inline;
+	text-align: center;
+	padding-inline-start: 0px;
+	margin:0 5px;
+}
+
+ol.page-navigator li a{
+	padding: 2px;
+	/*margin: 5px;*/
+	color: rgb(255, 105, 180);
+	/*color: rgb(4,26,37);*/
+	background: rgb(4,26,37);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(255, 105, 180);
+}
+ol.page-navigator li.current a{
+	background: rgb(255, 105, 180);
+	color: rgb(4,26,37);
+	text-shadow: 0px 0px 5px rgb(4,26,37);
+}
+
+/* ============================= 正文 =========================*/
+div.contents{
+	padding: 15px 5px;
+}
+figure.aligncenter{
+	margin-left: 0px;
+	text-align: center;
+}
+figure.aligncenter img{
+	max-width: 80%
+}

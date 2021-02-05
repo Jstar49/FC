@@ -1,0 +1,23 @@
+a.btn{
+	padding: 5px;
+	margin: 5px;
+	color: rgb(4,26,37);
+	background: rgb(55,152,218);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	border-style: solid; 
+  	border-width: 2px;
+  	border-color: rgb(55,152,218);
+}
+a.btn:hover{
+	background: transparent;
+	color: rgb(55,152,218);
+	text-shadow: 0px 0px 5px rgb(4,26,37);
+}
+
+.headother{
+	padding: 10px;
+	margin-bottom: 2px;
+}
