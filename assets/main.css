@@ -4,6 +4,14 @@ body{
   	font-family: 'Source Code Pro', monospace;
 }
 
+a{
+	font-size: 18px;
+	font-weight: 700;
+	/*padding: 2px;*/
+	color: rgb(255, 105, 180);
+	text-decoration: none;
+}
+
 div.mainContainer{
 	max-width: 800px;
   	min-width: 300px;
@@ -61,6 +69,7 @@ div.indiv{
 /* ================== 主页文章卡片 ==============*/
 a.articletitle{
 	text-decoration: none;
+	font-size: 28px;
 }
 
 h1.at{
@@ -141,6 +150,7 @@ ol.page-navigator li.current a{
 /* ============================= 正文 =========================*/
 div.contents{
 	padding: 15px 5px;
+	line-height: 1.8;
 }
 figure.aligncenter{
 	margin-left: 0px;
