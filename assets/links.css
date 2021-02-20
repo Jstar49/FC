@@ -1,16 +1,19 @@
 div.friend_link{
-	height: 150px;
-	text-decoration: none;
-	border-style: solid; 
-  	border-width: 2px;
+	height: 100px;
+	/*text-decoration: none;*/
+	/*border-style: solid; */
+  	/*border-width: 2px;*/
 }
 
 img.friend_link_icon{
 	border-radius: 50%; 
-	text-align: left;
-	width: 150px;
-    height: 150px;	
+	float: left;
+	width: 100px;
+    height: 100px;	
 }
 div.friend_link_info{
-	
+	margin-left: 50px;
+	border: 2px solid rgb(255, 102, 102);
+	height: 96px;
+	/*float: left;*/
 }
