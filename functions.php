@@ -73,3 +73,13 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 }
 
+function getContentTest($content) {
+	$pattern = '/\[(friendlink) link=\"(.*?)\" icon=\"(.*?)\" details=\"(.*?)\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<div class="friend_link" target="_blank" href="$2">
+    				<img class="friend_link_icon" src="$3" />
+    				<span>$4</span>
+    				<span>$5</span></div>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+    return $content;
+}

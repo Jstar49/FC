@@ -28,7 +28,7 @@ $this->need('includes/head.php');
 		</h1>
 
 		<div>
-			<?php $this->content(); ?>
+			<?php echo getContentTest($this->content); ?>
 		</div>
 
 	</div>
