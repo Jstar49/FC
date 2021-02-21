@@ -8,7 +8,7 @@
 ## 使用
 
 1. 下载此项目源码
-2. 解压，上传至网站 Typecho 根目录下的 user/themes/ 路径
+2. 解压，上传至网站 Typecho 根目录下的 `user/themes/` 路径
 3. 到网站后台 - 外观 - 主题 中启用此主题
 4. 设置外观
 
@@ -25,7 +25,6 @@
 [friendlink link="站点地址" icon="头像地址" details="站点描述"] 站点标题 [/friendlink]  
 [/friend_link_block]
 ```
-
 
 -------
 
