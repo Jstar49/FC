@@ -18,7 +18,17 @@
 #### 友链页面
 新建独立页面，在自定义模板中选择 Links 。
 新增友链，使用短代码：
->[friendlink link="站点地址" icon="头像地址" details="站点描述"] 站点标题 [/friendlink]
+
+```
+[friend_link_block]  
+[friendlink link="站点地址" icon="头像地址" details="站点描述"] 站点标题 [/friendlink]  
+[friendlink link="站点地址" icon="头像地址" details="站点描述"] 站点标题 [/friendlink]  
+[/friend_link_block]
+```
+
+
+-------
 
 ## 感谢
+
 * 感谢 [AlanDecode](https://github.com/AlanDecode) 的 [Typecho 主题起步框架](https://github.com/AlanDecode/typecho-theme-dev-framework)

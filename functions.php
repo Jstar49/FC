@@ -73,14 +73,25 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 }
 
+// 友链短代码
 function getContentTest($content) {
+    $pattern = '/\[(friend_link_block)\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<div class="friend_link_block" >
+                        $2
+                    </div>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+
 	$pattern = '/\[(friendlink) link=\"(.*?)\" icon=\"(.*?)\" details=\"(.*?)\"\](.*?)\[\s*\/\1\s*\]/';
     $replacement = '<div class="friend_link" >
-    				<img class="friend_link_icon" src="$3" />
-    				<div class="friend_link_info">
-    					<a target="_blank" href="$2"><h2>$5</h2></a>
-    					<span>$4</span>
-    				</div>
+                        <div class="friend_block">
+                            <img class="friend_link_icon" src="$3" />
+                            <div class="friend_link_info">
+                                <div class="friend_link_title"><a class="friend_link_title" target="_blank" href="$2">$5</a></div>
+                                
+                                <div class="friend_link_details">$4</div>
+                            </div>
+                        </div>
     				</div>';
     $content = preg_replace($pattern, $replacement, $content);
 
