@@ -22,7 +22,7 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 	<?php while($this->next()): ?>
-		<div class="indiv blue bodyother">
+		<div class="indiv white bodyother">
 			<h1 class="at" itemprop="name headline">
 				<a class="articletitle blue" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 			</h1>

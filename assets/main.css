@@ -21,6 +21,7 @@ div.mainContainer{
   	border-width: 2px;
   	border-color: rgb(55,152,218);
   	padding: 2px;
+  	background-color: #2c2a2a;
 }
 
 /* ==================== 闪烁效果 =================*/
@@ -65,6 +66,10 @@ div.indiv{
 }
 .blue-green{
 	/*color: rgb(0, 255, 255);*/
+}
+
+.white{
+	color: rgb(240, 240, 240);
 }
 /* ================== 主页文章卡片 ==============*/
 a.articletitle{
