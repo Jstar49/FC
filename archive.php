@@ -17,7 +17,7 @@ $this->need('includes/head.php');
 	<!-- header -->
 	<?php $this->need('includes/header.php'); ?>
 
-	<div class="indiv blue bodyother">
+	
 		<h1 class="at" itemprop="name headline">
 			<?php $this->archiveTitle(array(
 	            'category'  =>  _t('分类 %s 下的文章'),
@@ -29,7 +29,7 @@ $this->need('includes/head.php');
 
 		<?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
-    		<div class="indiv blue bodyother">
+    		<div class="indiv white bodyother">
     			<h1 class="at" itemprop="name headline">
 					<a class="articletitle blue" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 				</h1>
@@ -59,7 +59,7 @@ $this->need('includes/head.php');
                 <h2 class="post-title"><?php _e('没有找到内容'); ?></h2>
             </article>
         <?php endif; ?>
-	</div>
+	
 
 	<div class="indiv blue">
 		<?php $this->need('includes/footer.php'); ?>

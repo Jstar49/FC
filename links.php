@@ -22,7 +22,7 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv blue bodyother">
+	<div class="indiv white bodyother">
 		<h1 class="at" itemprop="name headline">
 			<a class="articletitle blue" itemprop="url">友情链接</a>
 		</h1>
@@ -36,7 +36,7 @@ $this->need('includes/head.php');
 	<!-- 主体 -->
 
 	<!-- 评论区 -->
-	<div class="indiv blue comsother">
+	<div class="indiv blue comsother box-shadow">
 		<?php $this->need('comments.php'); ?>
 	</div>
 

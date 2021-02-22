@@ -22,7 +22,7 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv blue bodyother">
+	<div class="indiv white bodyother">
 		<h1 class="at" itemprop="name headline">
 			<a class="articletitle blue" itemprop="url">归档</a>
 		</h1>
@@ -55,10 +55,6 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<!-- 评论区 -->
-	<div class="indiv blue comsother">
-		<?php $this->need('comments.php'); ?>
-	</div>
 
 	<div class="indiv blue">
 		<?php $this->need('includes/footer.php'); ?>

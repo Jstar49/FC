@@ -25,6 +25,7 @@ div.friend_block{
 	height: 80%;
 	background-color: white;
 	margin-left: 10%;
+	border-radius: 15px;
 }
 
 img.friend_link_icon{
@@ -54,4 +55,5 @@ a.friend_link_title{
 }
 div.friend_link_details{
 	/*text-align: center;*/
+	color: #2c2a2a;
 }

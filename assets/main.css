@@ -1,5 +1,7 @@
 body{
-	background-color: rgb(4,26,37);
+	/*background-color: rgb(4,26,37);*/
+	
+	background-color: rgb(5, 5, 5);
 	font-size: 16px;
   	font-family: 'Source Code Pro', monospace;
 }
@@ -17,11 +19,11 @@ div.mainContainer{
   	min-width: 300px;
   	margin:0 auto ;
   	margin-top: 200px;
-  	border-style: solid; 
-  	border-width: 2px;
-  	border-color: rgb(55,152,218);
+  	/*border-style: solid; */
+  	/*border-width: 2px;*/
+  	/*border-color: rgb(55,152,218);*/
   	padding: 2px;
-  	background-color: #2c2a2a;
+  	/*background-color: #2c2a2a;*/
 }
 
 /* ==================== 闪烁效果 =================*/
@@ -45,15 +47,30 @@ div.bring{
 /*================= 首页框架 ========================*/
 
 div.indiv{
-	border-style: solid; 
-  	border-width: 2px;
-  	border-color: rgb(55,152,218);
+	/*border-style: solid; */
+  	/*border-width: 2px;*/
+  	/*border-color: rgb(55,152,218);*/
+	border-radius: 35px;
   	/*margin-top: 3px;*/
+	box-shadow: 0 4px 16px rgba(211, 231, 225, 0.15);
 }
 
 .bodyother{
 	padding: 20px;
-	margin-bottom: 2px;	
+	margin-bottom: 50px;
+	background-color: #2c2a2a;	
+	-webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+.bodyother:hover{
+	box-shadow: 0 16px 32px 0 rgba(211, 231, 225, 0.15);
+	transform: translate(0,-5px);
+	transition-delay: 0s !important;
+}
+
+div.box-shadow {
+	-webkit-box-shadow: 0 0.25rem 1rem rgba(211, 231, 225, 0.15);
+	box-shadow: 0 4px 16px rgba(211, 231, 225, 0.15);
 }
 
 /* ===================== 颜色 ====================*/
@@ -110,10 +127,20 @@ span.tags a:hover{
 }
 
 /* =============== 评论区=====================*/
-div.comsother{
+
+.comsother{
 	padding: 20px;
-	margin-bottom: 2px;	
+	margin-bottom: 50px;
+	background-color: #2c2a2a;	
+	-webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
+.comsother:hover{
+	box-shadow: 0 16px 32px 0 rgba(211, 231, 225, 0.15);
+	transform: translate(0,-5px);
+	transition-delay: 0s !important;
+}
+
 
 /* =================== 分页区 ======================= */
 div.pageNumber{
