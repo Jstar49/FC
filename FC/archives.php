@@ -29,7 +29,7 @@ $this->need('includes/head.php');
 		
 		<?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);
 		    $year=0; $mon=0; $i=0; $j=0;
-		    $output = '<div id="teamnewslist">';
+		    $output = '<div id="teamnewslist" class="font_style">';
 		    while($archives->next()):
 		        $year_tmp = date('Y',$archives->created);
 		        $mon_tmp = date('m',$archives->created);
@@ -56,7 +56,7 @@ $this->need('includes/head.php');
 	<!-- 主体 -->
 
 
-	<div class="indiv white">
+	<div class="indiv white font_style">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

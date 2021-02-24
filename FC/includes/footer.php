@@ -12,6 +12,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <div class="foot">
 	<?php $this->options->footerEcho();?>
+	Power By Typecho | Theme <a href="https://github.com/Jstar49/FC" target="_blank">FC</a> by <a href="https://github.com/Jstar49" target="_blank">Jstar</a>
 </div>
 <footer>
 <script src="<?php Utils::indexTheme('assets/main.js'); ?>"></script>

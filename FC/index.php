@@ -28,28 +28,28 @@ $this->need('includes/head.php');
 			</h1>
 			<div class="tips">
 				<span>
-					<?php _e('时间: '); ?><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+					<?php _e('时间: '); ?><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
 				</span>
 				<span>
-					<?php _e('分类: '); ?><span class="tags"><?php $this->category(','); ?></span>
+					<?php _e('分类: '); ?><span class="tags font_style"><?php $this->category(','); ?></span>
 				</span>
 				
 			</div>
-			<div class="blue-green">
+			<div class="font_style">
 				<?php $this->excerpt(300); ?>
 			</div>
-			<div class="articletag">
+			<div class="articletag font_style">
 				<?php _e('标签: '); ?><span class="tags"><?php $this->tags(', ', true, 'none'); ?></span>
 			</div>
 			
 		</div>
 	<?php endwhile; ?>
 	<!-- 主体 -->
-	<div class="pageNumber white">
+	<div class="pageNumber white font_style">
 		<?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 	</div>
 	
-	<div class="indiv white">
+	<div class="indiv white font_style">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

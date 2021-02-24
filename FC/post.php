@@ -44,11 +44,11 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 	<!-- 评论区 -->
-	<div class="indiv blue comsother">
+	<div class="indiv blue comsother font_style">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv white">
+	<div class="indiv white font_style">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

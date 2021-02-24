@@ -27,22 +27,22 @@ $this->need('includes/head.php');
 		</h1>
 		<div class="tips">
 			<span>
-				<?php _e('时间: '); ?><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+				<?php _e('时间: '); ?><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
 			</span>
 			
 		</div>
-		<div>
+		<div class="font_style">
 			<?php $this->content(); ?>
 		</div>
 	</div>
 
 	<!-- 主体 -->
 
-	<div class="indiv white comsother">
+	<div class="indiv white comsother font_style">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv white ">
+	<div class="indiv white font_style">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

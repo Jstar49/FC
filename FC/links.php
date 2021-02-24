@@ -27,7 +27,7 @@ $this->need('includes/head.php');
 			<a class="articletitle white" itemprop="url">友情链接</a>
 		</h1>
 
-		<div>
+		<div class="font_style">
 			<?php echo getContentTest($this->content); ?>
 		</div>
 
@@ -36,11 +36,11 @@ $this->need('includes/head.php');
 	<!-- 主体 -->
 
 	<!-- 评论区 -->
-	<div class="indiv white comsother box-shadow">
+	<div class="indiv white comsother box-shadow font_style">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv white">
+	<div class="indiv white font_style">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>
