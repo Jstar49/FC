@@ -24,7 +24,7 @@ $this->need('includes/head.php');
 	<?php while($this->next()): ?>
 		<div class="indiv white bodyother box-shadow">
 			<h1 class="at" itemprop="name headline">
-				<a class="articletitle blue" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+				<a class="articletitle white" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 			</h1>
 			<div class="tips">
 				<span>
@@ -45,11 +45,11 @@ $this->need('includes/head.php');
 		</div>
 	<?php endwhile; ?>
 	<!-- 主体 -->
-	<div class="pageNumber blue">
+	<div class="pageNumber white">
 		<?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 	</div>
 	
-	<div class="indiv blue">
+	<div class="indiv white">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

@@ -21,9 +21,9 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv white bodyother">
+	<div class="indiv white postdiv box-shadow">
 		<h1 class="at" itemprop="name headline">
-			<a class="articletitle blue" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+			<a class="articletitle white" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 		</h1>
 		<div class="tips">
 			<span>

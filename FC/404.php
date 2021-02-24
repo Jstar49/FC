@@ -19,11 +19,11 @@ $this->need('includes/head.php');
 	<!-- header -->
 
 	<!-- 主体 -->
-	<div class="indiv blue bodyother">
+	<div class="indiv white bodyother">
 		<h1>404</h1>
 	</div>
 
-	<div class="indiv blue">
+	<div class="indiv white">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

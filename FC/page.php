@@ -1,9 +1,9 @@
 <?php
 /**
- * <em>Links</em>
+ * page.php
  * 
+ * 独立页
  * 
- * @package 	custom
  * @author      Jstar
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -11,7 +11,6 @@ $this->need('includes/head.php');
 // $this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
-<link rel="stylesheet" href="<?php Utils::indexTheme('assets/links.css'); ?>" />
 <!--页面主要内容-->
 
 
@@ -22,25 +21,28 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv white bodyother">
+	<div class="indiv white postdiv box-shadow">
 		<h1 class="at" itemprop="name headline">
-			<a class="articletitle blue" itemprop="url">友情链接</a>
+			<a class="articletitle white" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 		</h1>
-
-		<div>
-			<?php echo getContentTest($this->content); ?>
+		<div class="tips">
+			<span>
+				<?php _e('时间: '); ?><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+			</span>
+			
 		</div>
-
+		<div>
+			<?php $this->content(); ?>
+		</div>
 	</div>
 
 	<!-- 主体 -->
 
-	<!-- 评论区 -->
-	<div class="indiv blue comsother box-shadow">
+	<div class="indiv white comsother">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv blue">
+	<div class="indiv white ">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

@@ -22,9 +22,9 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv white bodyother">
+	<div class="indiv white postdiv box-shadow">
 		<h1 class="at" itemprop="name headline">
-			<a class="articletitle blue" itemprop="url">归档</a>
+			<a class="articletitle white" itemprop="url">归档</a>
 		</h1>
 		
 		<?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);
@@ -56,7 +56,7 @@ $this->need('includes/head.php');
 	<!-- 主体 -->
 
 
-	<div class="indiv blue">
+	<div class="indiv white">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>
