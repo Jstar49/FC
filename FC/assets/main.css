@@ -192,12 +192,14 @@ div.contents{
 	line-height: 1.5;
 	font-size: 18px;
 }
-figure.aligncenter{
+figure{
+	margin-inline-start: 0px;
+    margin-inline-end: 0px;
 	margin-left: 0px;
 	text-align: center;
 }
-figure.aligncenter img{
-	max-width: 80%
+figure img{
+	max-width: 90%;
 }
 /* =============================== 字体 ====================== */
 .font_style{

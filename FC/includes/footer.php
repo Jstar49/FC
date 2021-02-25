@@ -21,3 +21,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function () {
+		console.log(123);
+		$('figure').viewer({
+		navbar: false,
+		button: true,
+		toolbar: false,
+		title: false
+		});
+		});
+</script>
