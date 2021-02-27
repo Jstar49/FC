@@ -1,21 +1,18 @@
-a.btn{
-	padding: 5px;
-	margin: 5px;
-	color: rgb(4,26,37);
-	background: rgb(55,152,218);
-	text-decoration: none;
-	text-transform: uppercase;
-	text-shadow: none;
-	font-weight: bold;
-	border-style: solid; 
-  	border-width: 2px;
-  	border-color: rgb(55,152,218);
+ol.header_list{
+	display: inline-block;
+	list-style: none;
+	padding-inline-start:0px;
 }
-a.btn:hover{
-	background: transparent;
-	color: rgb(55,152,218);
-	text-shadow: 0px 0px 5px rgb(4,26,37);
+ol.header_list li{
+	display: inline;
 }
+
+a.header_pages_title{
+	color: rgb(240, 240, 240);
+	font-size: 25px;
+	margin: 0 10px;
+}
+
 
 .headother{
 	padding: 10px;
