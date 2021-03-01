@@ -28,10 +28,12 @@ $this->need('includes/head.php');
 			</h1>
 			<div class="tips">
 				<span>
-					<?php _e('时间: '); ?><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+					<i class="fa fa-bullseye" style="font-size:16px;"></i>
+					<span><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
 				</span>
 				<span>
-					<?php _e('分类: '); ?><span class="tags font_style"><?php $this->category(','); ?></span>
+					<i class="fa fa-bookmark" style="font-size:16px;"></i>
+					<span class="tags font_style"><?php $this->category(','); ?></span>
 				</span>
 				
 			</div>
@@ -39,7 +41,15 @@ $this->need('includes/head.php');
 				<?php $this->excerpt(300); ?>
 			</div>
 			<div class="articletag font_style">
-				<?php _e('标签: '); ?><span class="tags"><?php $this->tags(', ', true, 'none'); ?></span>
+				<span>
+					<i class="fa fa-eye" style="font-size:16px;"></i>
+					<span class="font_style"><?php get_post_view($this) ?></span>
+				</span>
+				
+				<span>
+					<i class="fa fa-hashtag" style="font-size:16px;"></i>
+					<span class="tags font_style"><?php $this->tags(', ', true, 'none'); ?></span>
+				</span>
 			</div>
 			
 		</div>

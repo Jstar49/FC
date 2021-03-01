@@ -53,7 +53,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <script type="text/javascript"src="<?php Utils::indexTheme('js/jquery-2.1.4.min.js'); ?>"></script>
 <script type="text/javascript"src="<?php Utils::indexTheme('js/viewer.min.js'); ?>"></script>
 <script type="text/javascript"src="<?php Utils::indexTheme('js/jquery-viewer.min.js'); ?>"></script>
-
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 <!-- 代码高亮 -->
 <link rel="stylesheet" href="<?php echo Utils::indexTheme() ?>highlight/<?php $this->options->code_High_Light_style() ?>/prism.css">
 <script src="<?php echo Utils::indexTheme() ?>highlight/<?php $this->options->code_High_Light_style() ?>/prism.js"></script>

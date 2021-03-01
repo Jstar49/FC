@@ -115,6 +115,12 @@ div.tips{
 	margin-bottom: 10px;	
 
 }
+/* 浏览次数 */
+/*span.view-times::before {*/
+    /*font: normal normal normal 12px/1 FontAwesome;*/
+    /*content: "\f06e";*/
+    /*margin-right: 3px;*/
+/*}*/
 /* ========= 分类按钮 ==========*/
 div.articletag{
 	margin-top: 10px;

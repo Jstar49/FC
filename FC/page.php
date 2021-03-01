@@ -27,7 +27,8 @@ $this->need('includes/head.php');
 		</h1>
 		<div class="tips">
 			<span>
-				<?php _e('时间: '); ?><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+				<i class="fa fa-bullseye" style="font-size:16px;"></i>
+				<span><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
 			</span>
 			
 		</div>
