@@ -1,9 +1,18 @@
 body{
 	/*background-color: rgb(4,26,37);*/
-	
-	background-color: rgb(5, 5, 5);
 	font-size: 16px;
-  	font-family: 'Source Code Pro', monospace;
+  	/*font-family: 'Source Code Pro', monospace;*/
+  	font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+
+  	width:100%;
+	height:100%;
+}
+
+body.Tblack{
+	background-color: rgb(5, 5, 5);
+}
+body.Twhite{
+	background-color: rgb(240, 240, 240);
 }
 
 a{
@@ -33,7 +42,7 @@ div.mainContainer{
 }
 
 /* ==================== 闪烁效果 =================*/
-div.bring{
+/*div.bring{
 	animation: mainContainer 10s linear infinite;
 }
 @keyframes mainContainer{
@@ -48,7 +57,7 @@ div.bring{
 	80%{opacity: 0.9}
 	90%{opacity: 0.8}
 	100%{opacity: 0.9}
-}
+}*/
 
 /*================= 首页框架 ========================*/
 
@@ -56,7 +65,7 @@ div.indiv{
 	/*border-style: solid; */
   	/*border-width: 2px;*/
   	/*border-color: rgb(55,152,218);*/
-	border-radius: 35px;
+	border-radius: 25px;
   	/*margin-top: 3px;*/
 	box-shadow: 0 4px 16px rgba(211, 231, 225, 0.15);
 }

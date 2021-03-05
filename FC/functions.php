@@ -127,8 +127,8 @@ function get_post_view($archive)
  * 主题后台设置
  */
 function themeConfig($form) {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
-    $form->addInput($logoUrl);
+    $backUrl = new Typecho_Widget_Helper_Form_Element_Text('backUrl', NULL, NULL, _t('页面背景图片地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
+    $form->addInput($backUrl);
 
     //页尾信息
     $footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义脚部信息'), _t('填写 html 代码，将输出在 &lt;footer&gt; 标签中，可以在这里写上统计代码'));
@@ -138,4 +138,12 @@ function themeConfig($form) {
     // 代码高亮风格选择
     $code_High_Light_style = new Typecho_Widget_Helper_Form_Element_Select('code_High_Light_style', array('0' => 'Twilight', '1' => 'Tomorrow-Night', '2' => 'Solarized-Light', '3' => 'Okaidia', '4' => 'Funky', '5' => 'Default', '6' => 'Dark', '7' => 'Coy'), '2', _t('代码高亮'), _t('选择代码高亮样式，默认为 Twilight '));
     $form->addInput($code_High_Light_style);
+
+    $Ttheme = new Typecho_Widget_Helper_Form_Element_Radio('Ttheme',
+        array('0' => _t('深黑'),
+        '1' => _t('亮白'),
+        '2' => _t('白黑'),
+        '3' => _t('黑白')),
+        '0', _t('主题配色'));
+    $form->addInput($Ttheme);
 }

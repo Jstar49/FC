@@ -15,7 +15,7 @@ $this->need('includes/head.php');
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 
 <!--页面主要内容-->
-<div class="mainContainer bring">
+<div class="mainContainer">
 	<!-- header -->
 	<?php $this->need('includes/header.php'); ?>
 	<!-- header -->
