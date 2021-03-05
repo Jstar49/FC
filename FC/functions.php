@@ -139,11 +139,11 @@ function themeConfig($form) {
     $code_High_Light_style = new Typecho_Widget_Helper_Form_Element_Select('code_High_Light_style', array('0' => 'Twilight', '1' => 'Tomorrow-Night', '2' => 'Solarized-Light', '3' => 'Okaidia', '4' => 'Funky', '5' => 'Default', '6' => 'Dark', '7' => 'Coy'), '2', _t('代码高亮'), _t('选择代码高亮样式，默认为 Twilight '));
     $form->addInput($code_High_Light_style);
 
-    $Ttheme = new Typecho_Widget_Helper_Form_Element_Radio('Ttheme',
-        array('0' => _t('深黑'),
-        '1' => _t('亮白'),
-        '2' => _t('白黑'),
-        '3' => _t('黑白')),
-        '0', _t('主题配色'));
-    $form->addInput($Ttheme);
+    // $Ttheme = new Typecho_Widget_Helper_Form_Element_Radio('Ttheme',
+    //     array('0' => _t('深黑'),
+    //     '1' => _t('亮白'),
+    //     '2' => _t('白黑'),
+    //     '3' => _t('黑白')),
+    //     '0', _t('主题配色'));
+    // $form->addInput($Ttheme);
 }
