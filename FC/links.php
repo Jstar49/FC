@@ -22,9 +22,9 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv white postdiv box-shadow">
+	<div class="indiv postdiv box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<h1 class="at" itemprop="name headline">
-			<a class="articletitle white" itemprop="url">友情链接</a>
+			<a class="articletitle fontTheme<?php $this->options->Ttheme()?>" itemprop="url">友情链接</a>
 		</h1>
 
 		<div class="font_style">
@@ -36,11 +36,11 @@ $this->need('includes/head.php');
 	<!-- 主体 -->
 
 	<!-- 评论区 -->
-	<div class="indiv white comsother box-shadow font_style">
+	<div class="indiv comsother box-shadow font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv white font_style">
+	<div class="indiv font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

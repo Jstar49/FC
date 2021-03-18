@@ -21,7 +21,7 @@ img.avatar{
 }
 /* 评论者链接 */
 span.authorurl{
-	color: rgb(240, 240, 240);
+	/*color: rgb(240, 240, 240);*/
 	font-weight: 700;
 	font-size: 24px;
 	font-style: normal;
@@ -37,7 +37,7 @@ span.authorurl a{
 div.comcontent{
 	margin-left: 50px;
 	margin-bottom: 0px;
-	color:  rgb(0, 255, 255);
+	color:  rgb(0,139,139);
 }
 /* 评论时间 && 回复 */
 span.timeandreply{
@@ -55,7 +55,7 @@ span.comment-reply a,span.cancelre a,a.idenout{
 	/*margin: 5px;*/
 	color: rgb(255, 105, 180);
 	/*color: rgb(4,26,37);*/
-	background: rgb(4,26,37);
+	/*background: rgb(4,26,37);*/
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow: none;
@@ -85,7 +85,7 @@ button.submitcom{
 	/*margin: 5px;*/
 	color: rgb(255,128,192);
 	/*color: rgb(4,26,37);*/
-	background: rgb(4,26,37);
+	/*background: rgb(4,26,37);*/
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow: none;

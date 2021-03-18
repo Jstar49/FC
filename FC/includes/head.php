@@ -48,12 +48,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/normalize.css'); ?>" />
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 
-<script type="text/javascript"src="https://cdn.jsdelivr.net/gh/yremp/cdn@1.0/js/jquery.js"></script>
-<script type="text/javascript"src="https://code.jquery.com/jquery-1.4.1.min.js"></script>
+<!-- <script rel="stylesheet" src="https://cdn.jsdelivr.net/gh/yremp/cdn@1.0/js/jquery.js"></script> -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.1.min.js"></script> -->
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/viewer.min.css'); ?>" />
-<script type="text/javascript"src="<?php Utils::indexTheme('js/jquery-2.1.4.min.js'); ?>"></script>
-<script type="text/javascript"src="<?php Utils::indexTheme('js/viewer.min.js'); ?>"></script>
-<script type="text/javascript"src="<?php Utils::indexTheme('js/jquery-viewer.min.js'); ?>"></script>
+<!-- icon -->
+<script type="text/javascript" src="<?php Utils::indexTheme('js/jquery-2.1.4.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php Utils::indexTheme('js/viewer.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php Utils::indexTheme('js/jquery-viewer.min.js'); ?>"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 <!-- 代码高亮 -->
 <link rel="stylesheet" href="<?php echo Utils::indexTheme() ?>highlight/<?php $this->options->code_High_Light_style() ?>/prism.css">

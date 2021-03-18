@@ -73,7 +73,7 @@ div.indiv{
 .bodyother{
 	padding: 20px;
 	margin-bottom: 50px;
-	background-color: #2c2a2a;	
+	/*background-color: #2c2a2a;	*/
 	-webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
 	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
@@ -91,7 +91,7 @@ div.box-shadow {
 div.postdiv{
 	padding: 20px;
 	margin-bottom: 50px;
-	background-color: #2c2a2a;	
+	/*background-color: #2c2a2a;	*/
 }
 
 
@@ -110,6 +110,22 @@ div.postdiv{
 .white{
 	color: rgb(240, 240, 240);
 }
+/* 主题配色: 黑白; */
+.backTheme0{
+	background-color: rgb(44, 42, 42);
+}
+.fontTheme0{
+	color: rgb(240, 240, 240);
+}
+
+/* 主题配色: 白黑; */
+.backTheme1{
+	background-color: rgb(246, 246, 243);
+}
+.fontTheme1{
+	color: rgb(44, 42, 42);
+}
+
 /* ================== 主页文章卡片 ==============*/
 a.articletitle{
 	text-decoration: none;
@@ -159,7 +175,7 @@ span.tags a:hover{
 .comsother{
 	padding: 20px;
 	margin-bottom: 50px;
-	background-color: #2c2a2a;	
+	/*background-color: #2c2a2a;	*/
 }
 
 

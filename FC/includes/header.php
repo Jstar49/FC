@@ -12,12 +12,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/header.css'); ?>" />
 
-<div class="indiv white headother font_style">
+<div class="indiv headother font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 	<ol class="header_list">
-		<li><a class="header_pages_title" href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+		<li><a class="header_pages_title fontTheme<?php $this->options->Ttheme()?>" href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
 		<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
 		<?php while($pages->next()): ?>
-			<li><a class="header_pages_title" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+			<li><a class="header_pages_title fontTheme<?php $this->options->Ttheme()?>" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
 		<?php endwhile; ?>
 	</ol>
 	

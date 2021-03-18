@@ -21,9 +21,9 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 
-	<div class="indiv white postdiv box-shadow">
+	<div class="indiv postdiv box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<h1 class="at" itemprop="name headline">
-			<a class="articletitle white" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+			<a class="articletitle fontTheme<?php $this->options->Ttheme()?>" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 		</h1>
 		<div class="tips">
 			<span>
@@ -55,11 +55,11 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 	<!-- 评论区 -->
-	<div class="indiv blue comsother font_style">
+	<div class="indiv comsother font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('comments.php'); ?>
 	</div>
 
-	<div class="indiv white font_style">
+	<div class="indiv font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>
