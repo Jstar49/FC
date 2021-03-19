@@ -20,7 +20,7 @@ $this->need('includes/head.php');
 
 	<!-- 主体 -->
 	<div class="indiv white bodyother">
-		<h1>404</h1>
+		<h1>404 | Not Found</h1>
 	</div>
 
 	<div class="indiv white">
