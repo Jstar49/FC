@@ -8,16 +8,13 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
-// $this->need('includes/header.php');
+$this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 <!--页面主要内容-->
 
 
 <div class="mainContainer bring">
-	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
-	<!-- header -->
 
 	<!-- 主体 -->
 
@@ -37,7 +34,14 @@ $this->need('includes/head.php');
 			
 		</div>
 		<div class="contents">
-			<?php $this->content(); ?>
+			<?php echo getContentTest($this->content); ?>
+		</div>
+
+		<div class="contents_tail_info">
+			<?php $this->options->contents_tail_info()?>
+			<p>本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA</a> 协议进行授权，在不违法此协议的前提下，您可以自由转载或改动。</p>
+			<p>本文链接：<a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></p>
+			
 		</div>
 
 		<div class="articletag font_style">

@@ -11,13 +11,14 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
+$this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 
 <!--页面主要内容-->
 <div class="mainContainer">
 	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
+	
 	<!-- header -->
 
 	<!-- 主体 -->

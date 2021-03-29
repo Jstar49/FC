@@ -60,7 +60,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <link rel="stylesheet" href="<?php echo Utils::indexTheme() ?>highlight/<?php $this->options->code_High_Light_style() ?>/prism.css">
 <script src="<?php echo Utils::indexTheme() ?>highlight/<?php $this->options->code_High_Light_style() ?>/prism.js"></script>
 </head>
-
-<body class="Twhite" style="background: url('<?php $this->options->backUrl(); ?>') no-repeat center;background-size: cover;background-attachment: fixed;">
+<body class="bodyTheme0" style="background: url('<?php $this->options->backUrl(); ?>') no-repeat center;background-size: cover;background-attachment: fixed;">
 
 

@@ -40,32 +40,22 @@
    <!-- 评论表单form放的地方-->
    <div id="<?php $this->respondId(); ?>">
       
-     <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+     <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form">
               <?php if($this->user->hasLogin()): ?>
               <p><?php _e('登录身份: '); ?><a class="idenfy" href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a class="idenout" href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
               <?php else: ?>
-            	<div class="username">
-            		<div id="usernameleft" for="author" class="required"><?php _e('称呼'); ?></div>
-                	<div id="usernameright"><input type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required /></div>
-            	</div>
-              <div class="usermail">
-              	<div id="usermailleft" for="mail"<?php if ($this->options->commentsRequireMail): ?> class="required"<?php endif; ?>><?php _e('邮箱'); ?></div>
-                	<div id="usermailright"><input type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> /></div>
-              </div>
-              <div class="urlinput">
-                  <div id="urlleft" for="url"<?php if ($this->options->commentsRequireURL): ?> class="required"<?php endif; ?>><?php _e('网站'); ?></div>
-                  <div id="urlright"><input type="url" name="url" id="url" class="text" placeholder="<?php _e('(非必填)http://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> /></div>
-              </div>
+
+              <input type="text" name="author" placeholder="称呼(*)" id="author" class="comments_user_input" value="<?php $this->remember('author'); ?>" required />
+              <input type="email" name="mail" placeholder="邮箱(*)" id="mail" class="comments_user_input" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
+              <input type="hidden" name="receiveMail" id="receiveMail" value="yes" />
+              <input type="url" name="url" id="url" class="comments_user_input" placeholder="网站(非必填)" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
               <?php endif; ?>
-              <p>
-                  <!-- <label for="textarea" class="required"><?php _e('内容'); ?></label> -->
-                  <textarea class="textinput" rows="8" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
-              </p>
+              <textarea class="textinput" rows="8" cols="50" name="text" id="textarea" class="textarea" placeholder="评论区(ฅʕ•̫͡•ʔฅฅʕ•̫͡•ʔฅ)" required ><?php $this->remember('text'); ?></textarea>
               <p>
                   <button class="submitcom" type="submit" class="submit"><?php _e('提交评论'); ?></button>
                   <span class="cancelre"> <!-- 取消回复 -->
-			        <?php $comments->cancelReply(); ?>
-			      </span>
+			             <?php $comments->cancelReply(); ?>
+			             </span>
               </p>
           </form>
       </div>

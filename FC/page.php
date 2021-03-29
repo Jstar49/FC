@@ -8,16 +8,13 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
-// $this->need('includes/header.php');
+$this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 <!--页面主要内容-->
 
 
 <div class="mainContainer bring">
-	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
-	<!-- header -->
 
 	<!-- 主体 -->
 
@@ -32,8 +29,8 @@ $this->need('includes/head.php');
 			</span>
 			
 		</div>
-		<div class="font_style">
-			<?php $this->content(); ?>
+		<div class="contents">
+			<?php echo getContentTest($this->content); ?>
 		</div>
 	</div>
 

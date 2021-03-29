@@ -8,7 +8,7 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
-// $this->need('includes/header.php');
+$this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/archives.css'); ?>" />
@@ -16,9 +16,6 @@ $this->need('includes/head.php');
 
 
 <div class="mainContainer bring">
-	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
-	<!-- header -->
 
 	<!-- 主体 -->
 

@@ -65,14 +65,14 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 }
 
-// 友链短代码
+// 自定义短代码
 function getContentTest($content) {
+	 // ============ 友链 ============ 
     $pattern = '/\[(friend_link_block)\](.*?)\[\s*\/\1\s*\]/';
     $replacement = '<div class="friend_link_block" >
                         $2
                     </div>';
     $content = preg_replace($pattern, $replacement, $content);
-
 
 	$pattern = '/\[(friendlink) link=\"(.*?)\" icon=\"(.*?)\" details=\"(.*?)\"\](.*?)\[\s*\/\1\s*\]/';
     $replacement = '<div class="friend_link" >
@@ -85,6 +85,56 @@ function getContentTest($content) {
                             </div>
                         </div>
     				</div>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+    //  ============ 下拉短代码 ============ 
+    $pattern = '/\[(details) title=\"(.*?)\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<details class="code_details">
+    					<summary class="code_summary">$2</summary>
+    					$3
+    				</details>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+    // ============ 文章图片适应 ============ 
+    $pattern = '/\<(img) src=\"(.*?)\"\>/';
+    $replacement = '<p><img class="content_images" src="$2"></p>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+    // ============ 提示 =============
+    // 警告
+    $pattern = '/\[(tips) category=\"warning\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<p class="code_warning">
+    					<i class="fa fa-exclamation-circle" style="font-size:20px;">  </i>
+    					$2
+    				</p>';
+    $content = preg_replace($pattern, $replacement, $content);
+    // 注意
+    $pattern = '/\[(tips) category=\"attention\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<p class="code_attention">
+    					<i class="fa fa-exclamation" style="font-size:20px;">  </i>
+    					$2
+    				</p>';
+    $content = preg_replace($pattern, $replacement, $content);
+    // 说明
+    $pattern = '/\[(tips) category=\"explain\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<p class="code_explain">
+    					<i class="fa fa-bell" style="font-size:20px;">  </i>
+    					$2
+    				</p>';
+    $content = preg_replace($pattern, $replacement, $content);
+
+    // Label
+    // Red
+    $pattern = '/\[(label) color=\"red\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<span class="code_label_red">$2</span>';
+    $content = preg_replace($pattern, $replacement, $content);
+    // Green
+    $pattern = '/\[(label) color=\"green\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<span class="code_label_green">$2</span>';
+    $content = preg_replace($pattern, $replacement, $content);
+    // blue
+    $pattern = '/\[(label) color=\"blue\"\](.*?)\[\s*\/\1\s*\]/';
+    $replacement = '<span class="code_label_blue">$2</span>';
     $content = preg_replace($pattern, $replacement, $content);
 
     return $content;
@@ -131,7 +181,7 @@ function themeConfig($form) {
     $form->addInput($backUrl);
 
     //页尾信息
-    $footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义脚部信息'), _t('填写 html 代码，将输出在 &lt;footer&gt; 标签中，可以在这里写上统计代码'));
+    $footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义脚部信息'), _t('填写 html 代码，将输出在 &lt;foot&gt; 标签中，可以在这里写上统计代码'));
     // $footerEcho->setAttribute('class', 'theme-setting-content theme-setting-development');
     $form->addInput($footerEcho);
 
@@ -144,4 +194,9 @@ function themeConfig($form) {
         '1' => _t('白黑')),
         '0', _t('主题配色'));
     $form->addInput($Ttheme);
+
+    //文章尾部信息、开源类别
+    $contents_tail_info = new Typecho_Widget_Helper_Form_Element_Textarea('contents_tail_info', NULL, NULL, _t('文章尾部信息'), _t('填写 html 代码，将输出在 &lt;contents_tail_info&gt; 标签中，可以在这里写上统计代码'));
+    // $footerEcho->setAttribute('class', 'theme-setting-content theme-setting-development');
+    $form->addInput($contents_tail_info);
 }

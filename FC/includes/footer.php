@@ -23,12 +23,36 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 </html>
 <script type="text/javascript">
 	$(document).ready(function () {
-		console.log(123);
 		$('figure').viewer({
-		navbar: false,
-		button: true,
-		toolbar: false,
-		title: false
+			navbar: false,
+			button: true,
+			toolbar: false,
+			title: false
 		});
+		$('p').viewer({
+			navbar: false,
+			button: true,
+			toolbar: false,
+			title: false
 		});
+	});
+	var open = false;
+    $('#toggle').click(function (){
+                // 按钮状态
+        // $(this).css("background-color", open ? '#fff' : '#222');  // logo周边颜色
+        var navBar = $('.header_nav_bar');
+                // 设置header的高度，将导航列表显示出来
+        var height = navBar.offset().top + navBar.height();
+        console.log(height);
+        $('.index_header').animate({
+            height: open ? 50 : height
+        });
+                // 修改开关状态
+        open = !open;
+    });
+
+    $("#toggle").click(function() {
+      $(this).toggleClass("on");
+      // $("#menu").slideToggle();
+    });
 </script>

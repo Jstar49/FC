@@ -8,16 +8,14 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
+$this->need('includes/header.php');
 ?>
 
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 <!--页面主要内容-->
 
-<div class="mainContainer bring">
+<div class="mainContainer">
 	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
-
-	
 		<h1 class="at white" itemprop="name headline">
 			<?php $this->archiveTitle(array(
 	            'category'  =>  _t('分类 %s 下的文章'),
@@ -29,9 +27,9 @@ $this->need('includes/head.php');
 
 		<?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
-    		<div class="indiv white bodyother">
+    		<div class="indiv bodyother box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
     			<h1 class="at" itemprop="name headline">
-					<a class="articletitle white" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+					<a class="articletitle fontTheme<?php $this->options->Ttheme()?>" itemprop="url" href="<?php $this->permalink() ?>" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 				</h1>
 				<div class="tips">
 					<span>
@@ -71,7 +69,7 @@ $this->need('includes/head.php');
         <?php endif; ?>
 	
 
-	<div class="indiv white font_style">
+	<div class="indiv font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

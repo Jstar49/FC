@@ -101,40 +101,32 @@ button.submitcom:hover{
 }
 
 /* 评论者信息 */
-div.urlinput,div.username,div.usermail{
-	overflow: hidden;
-	height: 26px;
-	/*width: 100%;*/
-}
-div.urlinput>div{height: 100%;}
-div.username>div{height: 100%;}
-div.usermail>div{height: 100%;}
-div.urlinput #urlleft,div.username #usernameleft,div.usermail #usermailleft{
-	/*width: 10%;*/
-	/*width: 20px;*/
-	float: left;
-	width: 40px;
-}
-div.urlinput #urlright,div.username #usernameright,div.usermail #usermailright{
-	/*width: calc(100%-32px);*/
-	/*margin-left: 5px;*/
-	overflow: hidden;
-}
-div.urlinput #urlright input,div.username #usernameright input,div.usermail #usermailright input{
-	width: 100%;
+.comment-form{
+	position: relative;
+	margin: 0 0 40px;
+	padding: 10px 20px;
+	border: 1px solid rgb(55,152,218);
+	border-radius: 3px;
+	background-color: #fff;
+
 }
 textarea.textinput{
 	width: 100%;
+	border: none;
+	outline: 0;
 }
-
-div.nameandmail{
-	overflow: hidden;
-}
-div.nameandmail div.username{
+.comment-form .comments_user_input{
+	border: none;
+	margin-right: 5px;
 	float: left;
-	width: 50%;
-}
-div.nameandmail div.usermail{
-	overflow: hidden;
-	width: 50%;
+	width: 100%;
+	max-width: 230px;
+	border-bottom: 1px solid rgb(55,152,218);
+	border-radius: 0;
+	font-size: 13px;
+	display: block;
+	height: 34px;
+	color: rgb(44, 42, 42);
+	outline: 0;
+	
 }
