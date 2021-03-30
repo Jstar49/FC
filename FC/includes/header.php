@@ -30,9 +30,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 			<div class="two"></div>
 			<div class="three"></div>
 		</div>
-		<div id="header_nav_button" class="header_nav_button" onclick="this">
-			Joessem
-		</div>
+		<a id="header_nav_button" class="header_nav_button" href="<?php $this->options->siteUrl(); ?>">
+			[<?php $this->options->title() ?>]
+		</a>
 		<ul class="header_nav_bar">
 			<li><a href="<?php $this->options->siteUrl(); ?>">首页</a></li>
 			<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
