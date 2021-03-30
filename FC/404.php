@@ -8,22 +8,20 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
+$this->need('includes/header.php');
 ?>
 <link rel="stylesheet" href="<?php Utils::indexTheme('assets/main.css'); ?>" />
 <!--页面主要内容-->
 
 
 <div class="mainContainer bring">
-	<!-- header -->
-	<?php $this->need('includes/header.php'); ?>
-	<!-- header -->
 
 	<!-- 主体 -->
-	<div class="indiv white bodyother">
+	<div class="indiv bodyother box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<h1>404 | Not Found</h1>
 	</div>
 
-	<div class="indiv white">
+	<div class="indiv box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>

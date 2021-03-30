@@ -2,10 +2,10 @@ div.index_header{
 	width: 100%;
 }
 
-div.header_nav_button{
+a.header_nav_button{
 	display: none;
 	float: right;
-	margin-top: 5px;
+	margin-top: 15px;
 }
 div.header_nav{
 	height: 50px;
@@ -21,6 +21,9 @@ ul.header_nav_bar li{
     float: left;
     padding: 0 10px;
 }
+ul.header_nav_bar li a{
+
+}
 
 #toggle {
     float: left;
@@ -30,6 +33,8 @@ ul.header_nav_bar li{
     border-radius: 5px;
     width: 28px;
     height: 30px;
+    padding: 2px 4px;
+    background-color: rgb(230,230,250);
   /*width: 28px;*/
   /*height: 30px;*/
   /*margin: 10px auto;*/
@@ -59,24 +64,28 @@ ul.header_nav_bar li{
 /*========= media ============*/
 @media screen and (max-width: 768px){
     div.index_header {
-        padding: 10px 5%;
+        padding: 10px 0px;
         height: 50px;
         overflow: hidden;
     }
     #toggle{
         display: block;
     }
-    div.header_nav_button {
+    a.header_nav_button {
         display: block;
     }
     ul.header_nav_bar {
         margin-top: 15px;
-        border-top: solid 1px #111;
+        border-top: solid 5px #111;
         width:100%;
+        padding-inline-start: 0px;
     }
-   ul.header_nav_bar li {
+    ul.header_nav_bar li {
         float: none;
         padding: 0 10px;
+        opacity:0.8;
+        background-color: rgb(230,230,250);
+        
     }
 
 }
