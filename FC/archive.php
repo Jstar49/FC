@@ -34,21 +34,21 @@ $this->need('includes/header.php');
 				<div class="tips">
 					<span>
 						<i class="fa fa-bullseye" style="font-size:16px;"></i>
-						<span><time class="green font_style" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
+						<span><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
 					</span>
 					<span>
 						<i class="fa fa-bookmark" style="font-size:16px;"></i>
-						<span class="tags font_style"><?php $this->category(','); ?></span>
+						<span class="tags"><?php $this->category(','); ?></span>
 					</span>
 					
 				</div>
 				<div class="font_style">
 					<?php $this->excerpt(300); ?>
 				</div>
-				<div class="articletag font_style">
+				<div class="articletag">
 					<span>
 						<i class="fa fa-eye" style="font-size:16px;"></i>
-						<span class="view-times font_style"><?php get_post_view($this) ?></span>
+						<span class="view-times"><?php get_post_view($this) ?></span>
 					</span>
 					
 					<span>
@@ -69,7 +69,7 @@ $this->need('includes/header.php');
         <?php endif; ?>
 	
 
-	<div class="indiv font_style backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
+	<div class="indiv backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
 		<?php $this->need('includes/footer.php'); ?>
 	</div>
 </div>
