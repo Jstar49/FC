@@ -27,36 +27,39 @@ $this->need('includes/header.php');
 
 		<?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
-    		<div class="indiv bodyother box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
-    			<h1 class="at" itemprop="name headline">
-					<a class="articletitle fontTheme<?php $this->options->Ttheme()?>" itemprop="url" href="<?php $this->permalink() ?>" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-				</h1>
-				<div class="tips">
-					<span>
-						<i class="fa fa-bullseye" style="font-size:16px;"></i>
-						<span><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
-					</span>
-					<span>
-						<i class="fa fa-bookmark" style="font-size:16px;"></i>
-						<span class="tags"><?php $this->category(','); ?></span>
-					</span>
-					
-				</div>
-				<div class="font_style">
-					<?php $this->excerpt(300); ?>
-				</div>
-				<div class="articletag">
-					<span>
-						<i class="fa fa-eye" style="font-size:16px;"></i>
-						<span class="view-times"><?php get_post_view($this) ?></span>
-					</span>
-					
-					<span>
-						<i class="fa fa-hashtag" style="font-size:16px;"></i>
-						<span class="tags"><?php $this->tags(', ', true, 'none'); ?></span>
-					</span>
-				</div>
+    		<div class="article_Card_Bg indiv bodyother box-shadow backTheme<?php $this->options->Ttheme()?> fontTheme<?php $this->options->Ttheme()?>">
+			<h1 class="at article_Card_Title" itemprop="name headline">
+				<a class="article_Card_blur_cont articletitle fontTheme<?php $this->options->Ttheme()?>" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+			</h1>
+			<div class="tips article_Card_Date">
+				<span class="article_Card_blur_cont">
+					<i class="fa fa-bullseye" style="font-size:16px;"></i>
+					<span><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
+				</span>
+				<span class="article_Card_blur_cont">
+					<i class="fa fa-bookmark" style="font-size:16px;"></i>
+					<span class="tags "><?php $this->category(','); ?></span>
+				</span>
+				
 			</div>
+			<div class="index_Card_Content font_style article_Card_Cont">
+				<span class="font_style article_Card_blur_cont">
+					<?php $this->excerpt(300); ?>
+				</span>
+				
+			</div>
+			<div class="articletag article_Card_Views">
+				<span class="article_Card_blur_cont">
+					<i class="fa fa-eye" style="font-size:16px;"></i>
+					<span class=""><?php get_post_view($this) ?></span>
+				</span>
+				
+				<span class="article_Card_blur_cont">
+					<i class="fa fa-hashtag" style="font-size:16px;"></i>
+					<span class="tags "><?php $this->tags(', ', true, 'none'); ?></span>
+				</span>
+			</div>
+		</div>
 
 		<?php endwhile; ?>
 		<div class="pageNumber blue">
