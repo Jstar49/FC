@@ -45,7 +45,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		for (var i = 0; i < test1.length; i++) {
 			style = document.createElement('style');
 			style.innerText = ".article_Card_Title"+ i +"{} \
-								.article_Card_Title"+i+"::after { \
+								.article_Card_Title"+i+"::before { \
 								content: '';\
 								position: absolute;\
 								width: "+(div_Size[i*6+0].offsetWidth+5)+"px;\
@@ -62,7 +62,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		for (var i = 0; i < test1.length; i++) {
 			style = document.createElement('style');
 			style.innerText = ".article_Card_Date"+ i +"{} \
-								.article_Card_Date"+i+"::after { \
+								.article_Card_Date"+i+"::before { \
 								content: '';\
 								position: absolute;\
 								width: "+(div_Size[i*6+1].offsetWidth+div_Size[i*6+2].offsetWidth+5)+"px;\
@@ -97,7 +97,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		for (var i = 0; i < test1.length; i++) {
 			style = document.createElement('style');
 			style.innerText = ".article_Card_Views"+ i +"{} \
-								.article_Card_Views"+i+"::after { \
+								.article_Card_Views"+i+"::before { \
 								content: '';\
 								position: absolute;\
 								width: "+(div_Size[i*6+4].offsetWidth+div_Size[i*6+5].offsetWidth+5)+"px;\
