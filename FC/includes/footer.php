@@ -38,6 +38,17 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 		var test1;
 		var style;
 		var div_Size;
+		// var bg_url = "https://cdn.jsdelivr.net/gh/mybules/cdn@1.6.0/mybules/2020-8-15-1/monv.jpg";
+		var bg_url = "<?php $this->options->index_card_background()?>";
+		style = document.createElement('style');
+		style.innerText = ".article_Card_Bg{\
+							background-image: url("+bg_url+");\
+							background-size: 100%;\
+							position: relative;\
+							background-position: center;\
+							transition: 1.5s;\
+							}";
+		document.body.appendChild(style);
 		// 文章卡片标题背景模糊
 		test1 = document.querySelectorAll(".article_Card_Title");
 		div_Size = document.querySelectorAll(".article_Card_blur_cont");
@@ -51,7 +62,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 								width: "+(div_Size[i*6+0].offsetWidth+5)+"px;\
 								height: "+(div_Size[i*6+0].offsetHeight+5)+"px;\
 								left: 20px;\
-								background-image: url(https://cdn.jsdelivr.net/gh/mybules/cdn@1.6.0/mybules/2020-8-15-1/monv.jpg);\
+								background-image: url("+bg_url+");\
     							filter: blur(9px);\
 								}";
 			document.body.appendChild(style);
@@ -68,7 +79,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 								width: "+(div_Size[i*6+1].offsetWidth+div_Size[i*6+2].offsetWidth+5)+"px;\
 								height: "+(div_Size[i*6+1].offsetHeight+5)+"px;\
 								left: 20px;\
-								background-image: url(https://cdn.jsdelivr.net/gh/mybules/cdn@1.6.0/mybules/2020-8-15-1/monv.jpg);\
+								background-image: url("+bg_url+");\
     							filter: blur(9px);\
 								}";
 			document.body.appendChild(style);
@@ -86,7 +97,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 								height: "+(div_Size[i*6+3].offsetHeight+5)+"px;\
 								left: 20px;\
 								\
-								background-image: url(https://cdn.jsdelivr.net/gh/mybules/cdn@1.6.0/mybules/2020-8-15-1/monv.jpg);\
+								background-image: url("+bg_url+");\
     							filter: blur(9px);\
 								}";
 			document.body.appendChild(style);
@@ -104,7 +115,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 								height: "+(div_Size[i*6+4].offsetHeight+5)+"px;\
 								left: 20px;\
 								\
-								background-image: url(https://cdn.jsdelivr.net/gh/mybules/cdn@1.6.0/mybules/2020-8-15-1/monv.jpg);\
+								background-image: url("+bg_url+");\
     							filter: blur(9px);\
 								}";
 			document.body.appendChild(style);

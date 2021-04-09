@@ -199,4 +199,9 @@ function themeConfig($form) {
     $contents_tail_info = new Typecho_Widget_Helper_Form_Element_Textarea('contents_tail_info', NULL, NULL, _t('文章尾部信息'), _t('填写 html 代码，将输出在 &lt;contents_tail_info&gt; 标签中，可以在这里写上统计代码'));
     // $footerEcho->setAttribute('class', 'theme-setting-content theme-setting-development');
     $form->addInput($contents_tail_info);
+
+    //首页文章卡片背景
+    $index_card_background = new Typecho_Widget_Helper_Form_Element_Text('index_card_background', NULL, NULL, _t('首页文章卡片背景'), _t('填写图片 url 地址'));
+    
+    $form->addInput($index_card_background);
 }

@@ -34,7 +34,7 @@ $this->need('includes/header.php');
 			<div class="tips article_Card_Date">
 				<span class="article_Card_blur_cont">
 					<i class="fa fa-bullseye" style="font-size:16px;"></i>
-					<span><time class="green" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
+					<span><time class="font_black" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
 				</span>
 				<span class="article_Card_blur_cont">
 					<i class="fa fa-bookmark" style="font-size:16px;"></i>
