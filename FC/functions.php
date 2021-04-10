@@ -58,12 +58,6 @@ function themeInit() {
     $db->query($query);
 }
 
-/**
- * 文章与独立页自定义字段
- */
-function themeFields(Typecho_Widget_Helper_Layout $layout) {
-
-}
 
 // 自定义短代码
 function getContentTest($content) {
@@ -172,6 +166,13 @@ function get_post_view($archive)
     echo $row['views'];
 }
 
+/**
+ * 文章与独立页自定义字段
+ */
+function themeFields(Typecho_Widget_Helper_Layout $layout) {
+	$image = new Typecho_Widget_Helper_Form_Element_Text('image', null, null, _t('文章头图'), _t('文章头图会显示在文章的顶部。'));
+    $layout->addItem($image);  //  注册
+}
 
 /**
  * 主题后台设置
@@ -202,6 +203,6 @@ function themeConfig($form) {
 
     //首页文章卡片背景
     $index_card_background = new Typecho_Widget_Helper_Form_Element_Text('index_card_background', NULL, NULL, _t('首页文章卡片背景'), _t('填写图片 url 地址'));
-    
     $form->addInput($index_card_background);
 }
+
