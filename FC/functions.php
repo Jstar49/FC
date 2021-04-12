@@ -170,9 +170,7 @@ function get_post_view($archive)
  * 文章与独立页自定义字段
  */
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
-	// 文章卡片背景图
-	$index_card_image = new Typecho_Widget_Helper_Form_Element_Text('index_card_image', null, null, _t('文章头图'), _t('文章头图会显示在文章的顶部。'));
-    $layout->addItem($index_card_image);
+
 }
 
 /**
@@ -203,7 +201,7 @@ function themeConfig($form) {
     $form->addInput($contents_tail_info);
 
     //首页文章卡片背景
-    $index_card_background = new Typecho_Widget_Helper_Form_Element_Text('index_card_background', NULL, NULL, _t('首页文章卡片背景'), _t('填写图片 url 地址'));
+    $index_card_background = new Typecho_Widget_Helper_Form_Element_Textarea('index_card_background', NULL, NULL, _t('首页随机文章卡片背景'), _t('填写多个图片 url 地址,以英文逗号(,)为分隔符, url 中请勿带有(,)符号.'));
     $form->addInput($index_card_background);
 }
 
