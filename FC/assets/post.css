@@ -1,0 +1,114 @@
+div.post-right-bottom-box{
+/*    position: fixed;
+    right: 100px;
+    bottom: 100px;*/
+    background: #333a45;
+}
+
+
+/*======== 两个按钮 ==============*/
+div.post-right-bottom-box ul.post_right_bottom_ul{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+	display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+div.post-right-bottom-box ul.post_right_bottom_ul li{
+	list-style-type: none;
+	box-sizing: inherit;
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.blue.lighten-2 {
+    background-color: #64B5F6 !important;
+}
+.blue.lighten-1 {
+    background-color: #42A5F5 !important;
+}
+.btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    background-color: #26a69a;
+    border-radius: 50%;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 14px;
+    outline: 0;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-floating i {
+	text-rendering: optimizeLegibility;
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 40px;
+    font-feature-settings: 'liga';
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+/* ============ 目录区块 =============*/
+.is-collapsed .card_expander{
+    max-height: 0;
+    min-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    opacity: 0;
+}
+.is-expanded .card_expander{
+    /*max-height: 400px;*/
+    /*min-height: 200px;*/
+    overflow: visible;
+    margin-top: 30px;
+    opacity: 1;
+    border-radius: 10px;
+    
+}
+
+.card_expander{
+    transition: all 0.4s ease-in-out;
+    /*background: #333a45;*/
+    position: relative;
+    /*right: 0px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #eceef1;
+    font-size: 1.5em;
+    /*padding: 30px;*/
+}
+
+div.post_Catalog_div{
+    
+}
+div.post_Catalog_div_box{
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    max-height: 400px;
+    min-height: 0px;
+    background: #333a45;
+    overflow:auto;
+    border-radius: 10px;
+}

@@ -25,8 +25,10 @@ Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('Contents
 /**
  * 主题启用时执行的方法
  */
-function themeInit() {
-    
+function themeInit($archive) {
+    if ($archive->is('single')) {
+        $archive->content = createCatalog($archive->content);
+    }
     // 首页及分类文章显示数量
     // if ($archive->is('index')) {
     //     $archive->parameter->pageSize = 5; 
@@ -205,3 +207,55 @@ function themeConfig($form) {
     $form->addInput($index_card_background);
 }
 
+// 用于文章页标题导航
+function createCatalog($obj) {    //为文章标题添加锚点
+    global $catalog;
+    global $catalog_count;
+    $catalog = array();
+    $catalog_count = 0;
+    $obj = preg_replace_callback('/<h([1-6])(.*?)>(.*?)<\/h\1>/i', function($obj) {
+        global $catalog;
+        global $catalog_count;
+        $catalog_count ++;
+        $catalog[] = array('text' => trim(strip_tags($obj[3])), 'depth' => $obj[1], 'count' => $catalog_count);
+        return '<h'.$obj[1].$obj[2].'><a name="cl-'.$catalog_count.'"></a>'.$obj[3].'</h'.$obj[1].'>';
+    }, $obj);
+    return $obj;
+}
+
+function getCatalog() {    //输出文章目录容器
+    global $catalog;
+    $index = '';
+    if ($catalog) {
+        $index = '<ul>'."\n";
+        $prev_depth = '';
+        $to_depth = 0;
+        foreach($catalog as $catalog_item) {
+            $catalog_depth = $catalog_item['depth'];
+            if ($prev_depth) {
+                if ($catalog_depth == $prev_depth) {
+                    $index .= '</li>'."\n";
+                } elseif ($catalog_depth > $prev_depth) {
+                    $to_depth++;
+                    $index .= '<ul>'."\n";
+                } else {
+                    $to_depth2 = ($to_depth > ($prev_depth - $catalog_depth)) ? ($prev_depth - $catalog_depth) : $to_depth;
+                    if ($to_depth2) {
+                        for ($i=0; $i<$to_depth2; $i++) {
+                            $index .= '</li>'."\n".'</ul>'."\n";
+                            $to_depth--;
+                        }
+                    }
+                    $index .= '</li>';
+                }
+            }
+            $index .= '<li><a href="#cl-'.$catalog_item['count'].'">'.$catalog_item['text'].'</a>';
+            $prev_depth = $catalog_item['depth'];
+        }
+        for ($i=0; $i<=$to_depth; $i++) {
+            $index .= '</li>'."\n".'</ul>'."\n";
+        }
+    $index = '<div id="toc-container">'."\n".'<div id="toc">'."\n".'<strong>文章目录</strong>'."\n".$index.'</div>'."\n".'</div>'."\n";
+    }
+    echo $index;
+}
